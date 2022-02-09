@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Login from "./components/Login/Login";
+import Main from "./components/Main/Main";
+import ManageQuestions from "./components/Admin/ManageQuestions";
+import AddQuestions from "./components/Admin/AddQuestions";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import React from "react";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <div className="App-header">
+        <Router>
+          <Switch>
+            <PrivateRoute path="/quiz">
+              <Main></Main>
+            </PrivateRoute>
+            <PrivateRoute path="/admin/manage_questions">
+              <ManageQuestions></ManageQuestions>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <PrivateRoute path="/admin/add_questions">
+              <AddQuestions></AddQuestions>
+            </PrivateRoute>
+            <PrivateRoute exact path="/">
+              <Main></Main>
+            </PrivateRoute>
+          </Switch>
+        </Router>
+      </div>
+      <Footer />
+    </React.Fragment>
   );
 }
 
