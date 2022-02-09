@@ -15,9 +15,6 @@ function App() {
       <div className="App-header">
         <Router>
           <Switch>
-            <PrivateRoute path="/quiz">
-              <Main></Main>
-            </PrivateRoute>
             <PrivateRoute path="/admin/manage_questions">
               <ManageQuestions></ManageQuestions>
             </PrivateRoute>

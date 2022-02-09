@@ -7,7 +7,7 @@ const Login = () => {
   const { from } = location.state || { from: { pathname: "/" } };
   const [userInfo, setUserInfo] = useState({
     email: "",
-    isAdmin: 0,
+    isAdmin: 'user',
   });
   const [password, setPassword] = useState("");
   const initialErrors = {
@@ -50,19 +50,19 @@ const Login = () => {
       setErrors({ ...errors, password: true });
       return;
     }
-
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
-    if (parseInt(userInfo.isAdmin) === 0) {
-      history.replace(from);
+    if (userInfo.isAdmin === 'user') {
+        console.log("dhukhse");
+      history.replace("/");
     } else {
+        console.log("dhukhe nai");
       history.replace("/admin/manage_questions");
-      location.reload();
     }
     window.location.reload(false);
 
     console.log("handle Submit");
   };
-  console.log(errors);
+  console.log(errors,userInfo,from, location.state);
   return (
     <div className="login">
       <h3>Sign In</h3>
@@ -110,7 +110,7 @@ const Login = () => {
               className="me-1"
               id="user"
               name="isAdmin"
-              value={0}
+              value='user'
               defaultChecked={true}
               onChange={handleChange}
             />
@@ -122,7 +122,7 @@ const Login = () => {
               className="me-1"
               id="admin"
               name="isAdmin"
-              value={1}
+              value='admin'
               onChange={handleChange}
             />
             <label htmlFor="admin">I am Admin</label>

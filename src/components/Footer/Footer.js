@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            <h1>This is Footer</h1>
+        <div className="d-flex align-items-center justify-content-center p-2">
+            <h6>All rights reserved. Debashis Ray</h6>
         </div>
     );
 };
