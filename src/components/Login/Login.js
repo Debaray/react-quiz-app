@@ -52,17 +52,12 @@ const Login = () => {
     }
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
     if (userInfo.isAdmin === 'user') {
-        console.log("dhukhse");
       history.replace("/");
     } else {
-        console.log("dhukhe nai");
       history.replace("/admin/manage_questions");
     }
     window.location.reload(false);
-
-    console.log("handle Submit");
   };
-  console.log(errors,userInfo,from, location.state);
   return (
     <div className="login">
       <h3>Sign In</h3>

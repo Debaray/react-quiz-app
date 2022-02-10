@@ -24,6 +24,9 @@ function App() {
             <PrivateRoute path="/admin/add_questions">
               <AddQuestions></AddQuestions>
             </PrivateRoute>
+            <PrivateRoute path="/admin/edit_questions/:id">
+              <AddQuestions></AddQuestions>
+            </PrivateRoute>
             <PrivateRoute exact path="/">
               <Main></Main>
             </PrivateRoute>

@@ -36,6 +36,10 @@
   color :red;
 }
 
+.text-style {
+  text-decoration: none;
+  color: black;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

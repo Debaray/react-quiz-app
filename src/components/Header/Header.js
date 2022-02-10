@@ -7,8 +7,7 @@ const Header = () => {
       localStorage.getItem("userInfo") &&
         setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     }
-    console.log("ssds");
-  });
+  },[]);
   const handleLogOut = (e) => {
     localStorage.removeItem("userInfo");
   };
