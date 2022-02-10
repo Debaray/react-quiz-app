@@ -25,20 +25,20 @@ const Main = () => {
   return (
     <div>
       {showScore ? (
-        <div className="">
+        <div>
           You scored {score} out of {questions.length}
         </div>
       ) : (
         <>
-          <div className="">
-            <div className="">
+          <div>
+            <div>
               <span>Question {currentQuestion + 1}</span>/{questions.length}
             </div>
-            <div className="">
+            <div>
               {questions[currentQuestion]?.question}
             </div>
           </div>
-          <div className="">
+          <div>
             {questions[currentQuestion]?.options.map((answerOption) => (
               <button
                 onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}

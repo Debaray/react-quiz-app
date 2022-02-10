@@ -1,5 +1,6 @@
 const questions = [
     {
+        id: 1,
         question: 'What is the capital of Banladesh?',
         options: [
             { answer: 'New York', isCorrect: false },
@@ -9,6 +10,7 @@ const questions = [
         ],
     },
     {
+        id: 2,
         question: 'Who is CEO of Strativ AB?',
         options: [
             { answer: 'Jeff Bezos', isCorrect: false },
@@ -18,6 +20,7 @@ const questions = [
         ],
     },
     {
+        id: 3,
         question: 'The iPhone was created by which company?',
         options: [
             { answer: 'Apple', isCorrect: true },
@@ -27,6 +30,7 @@ const questions = [
         ],
     },
     {
+        id: 4,
         question: 'How many time zones are there in Russia?',
         options: [
             { answer: '11', isCorrect: true },
@@ -36,6 +40,7 @@ const questions = [
         ],
     },
     {
+        id: 5,
         question: 'What’s the national flower of Japan?',
         options: [
             { answer: 'Cherry blossom', isCorrect: true },
@@ -45,6 +50,7 @@ const questions = [
         ],
     },
     {
+        id: 6,
         question: 'How many stripes are there on the US flag?',
         options: [
             { answer: '11', isCorrect: false },
@@ -54,6 +60,7 @@ const questions = [
         ],
     },
     {
+        id: 7,
         question: 'Name the longest river in the world?',
         options: [
             { answer: 'The Padma', isCorrect: false },
