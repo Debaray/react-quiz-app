@@ -54,8 +54,9 @@ const Login = () => {
     if (userInfo.isAdmin === 'user') {
       history.replace("/");
     } else {
-      history.replace("/managequestions");
+      history.replace("/admin/manage_questions");
     }
+    window.location.reload(false);
   };
   return (
     <div className="login">

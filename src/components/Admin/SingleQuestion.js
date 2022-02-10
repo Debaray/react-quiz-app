@@ -12,7 +12,7 @@ const SingleQuestion = (props) => {
   };
 
   const handleEdit = () => {
-    history.push(`/editquestions/${question.id}`);
+    history.push(`/admin/edit_questions/${question.id}`);
   };
   return (
     <div className="col-4">
