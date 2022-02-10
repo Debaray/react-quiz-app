@@ -56,7 +56,6 @@ const Login = () => {
     } else {
       history.replace("/managequestions");
     }
-    window.location.reload(false);
   };
   return (
     <div className="login">
