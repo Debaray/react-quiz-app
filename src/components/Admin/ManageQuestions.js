@@ -11,7 +11,7 @@ const ManageQuestions = () => {
   }, [reload]);
   return (
     <div>
-        <Link to={'/admin/add_questions'} className="btn btn-primary m-2 ms-3">Add new Question</Link>
+        <Link to={'/addquestions'} className="btn btn-primary m-2 ms-3">Add new Question</Link>
       <div className="row m-2">
         {questions.map((question, index) => (
           <SingleQuestion

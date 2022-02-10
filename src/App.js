@@ -15,16 +15,16 @@ function App() {
       <div className="App-header">
         <Router>
           <Switch>
-            <PrivateRoute path="/admin/manage_questions">
+            <PrivateRoute path="/managequestions">
               <ManageQuestions></ManageQuestions>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
-            <PrivateRoute path="/admin/add_questions">
+            <PrivateRoute path="/addquestions">
               <AddQuestions></AddQuestions>
             </PrivateRoute>
-            <PrivateRoute path="/admin/edit_questions/:id">
+            <PrivateRoute path="/editquestions/:id">
               <AddQuestions></AddQuestions>
             </PrivateRoute>
             <PrivateRoute exact path="/">

@@ -57,7 +57,7 @@ const AddQuestions = () => {
         questions.push({ ...question, id: questions[questions.length - 1].id + 1 });
         localStorage.setItem("questions", JSON.stringify(questions));
     }
-    history.push("/admin/manage_questions");
+    history.push("/managequestions");
    
   };
 

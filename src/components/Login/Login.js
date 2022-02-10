@@ -54,7 +54,7 @@ const Login = () => {
     if (userInfo.isAdmin === 'user') {
       history.replace("/");
     } else {
-      history.replace("/admin/manage_questions");
+      history.replace("/managequestions");
     }
     window.location.reload(false);
   };
